@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="$title$" />
+$if(description)$
+  <meta name="description" content="$description$" />
+$endif$
+  <title>$pagetitle$</title>
+  <link rel="canonical" href="$site-url$$path$" />
+  <link rel="icon" href="$root$favicon.ico?v=$build$" sizes="32x32" />
+  <link rel="icon" href="$root$favicon.svg?v=$build$" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="$root$apple-touch-icon.png?v=$build$" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="$pagetitle$" />
+  <meta property="og:title" content="$pagetitle$" />
+$if(description)$
+  <meta property="og:description" content="$description$" />
+$endif$
+  <meta property="og:url" content="$site-url$$path$" />
+  <meta property="og:locale" content="$og-locale$" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="alternate" hreflang="en" href="$site-url$" />
+  <link rel="alternate" hreflang="es" href="$site-url$es/" />
+  <link rel="alternate" hreflang="x-default" href="$site-url$" />
+  <script>
+    try {
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="$root$src/reset.css?v=$build$" />
+  <link rel="stylesheet" href="$root$src/index.css?v=$build$" />
+</head>
+<body>
+<header>
+<table class="header">
+  <tr>
+    <td rowspan="3" class="width-auto">
+      <h1 class="title">$title$</h1>
+      <span class="role">$subtitle$</span>
+$if(location)$
+      <em class="location">$location$</em>
+$endif$
+    </td>
+    <th scope="row" class="width-min">$updated-label$</th>
+    <td class="width-min"><time style="white-space: pre;">$date$</time></td>
+  </tr>
+  <tr>
+    <th scope="row" class="width-min">$language-label$</th>
+    <td class="width-min">$if(is-es)$<a href="$root$" hreflang="en" lang="en">EN</a> | <strong>ES</strong>$else$<strong>EN</strong> | <a href="$root$es/" hreflang="es" lang="es">ES</a>$endif$</td>
+  </tr>
+  <tr>
+    <th scope="row" class="width-min">$theme-label$</th>
+    <td class="width-min" style="white-space: nowrap;"><button type="button" class="theme-option" data-theme-option="dark" aria-pressed="true">$dark-label$</button> | <button type="button" class="theme-option" data-theme-option="light" aria-pressed="false">$light-label$</button></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="width-auto contact">
+      <a href="$root$$resume$?v=$build$" target="_blank" class="resume-link">$resume-label$</a> - <a href="$linkedin$">LinkedIn</a> - <a href="$github$">GitHub</a><br />
+      <a href="mailto:$email$">$email-display$</a>
+    </td>
+  </tr>
+</table>
+</header>
+$if(toc)$
+<nav id="TOC" aria-labelledby="toc-title">
+$if(toc-title)$
+<h2 id="toc-title">$toc-title$</h2>
+$endif$
+$table-of-contents$
+</nav>
+$endif$
+<main>
+$body$
+</main>
+$if(footer)$
+<hr>
+<footer class="site-footer">
+  <p>$footer$</p>
+</footer>
+$endif$
+  <script src="$root$src/index.js?v=$build$"></script>
+</body>
+</html>
