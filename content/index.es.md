@@ -28,7 +28,7 @@ is-es: true
 
 ## Intro {#intro}
 
-Hola, mundo. Soy Federico, ingeniero de ML/IA en Sabio Group. Antes de mi actual empleo, trabajé en una startup de aviación (Overwatch AI), dirigí investigación en NLP multimodal en el NSF AI Institute de la Universidad de Colorado Boulder y en el Consejo Superior de Investigaciones Científicas (CSIC).
+Hola, mundo. Soy Federico, ingeniero de ML/IA en Sabio Group. Antes de mi actual empleo, trabajé en Overwatch AI, una startup de aviación, y dirigí investigación en NLP multimodal tanto en el NSF AI Institute de la Universidad de Colorado Boulder como en el Consejo Superior de Investigaciones Científicas (CSIC).
 
 Me especializo en NLP y mis áreas favoritas son el post-training, los flujos de trabajo agénticos y la evaluación de sistemas basados en LLM. También investigo de vez en cuando, sobre todo en IA explicable y semántica computacional.
 

@@ -27,7 +27,7 @@ site-url: "https://fede-ortega.github.io/"
 
 ## Intro {#intro}
 
-Hi, world. I’m Federico, an ML/AI engineer at Sabio Group. Previously, I worked at an aviation startup (Overwatch AI), led multimodal NLP research at the University of Colorado Boulder’s NSF AI Institute and at the Spanish National Research Council (CSIC).
+Hi, world. I’m Federico, an ML/AI engineer at Sabio Group. Previously, I worked at Overwatch AI, an aviation startup, and led multimodal NLP research at both the University of Colorado Boulder’s NSF AI Institute and the Spanish National Research Council (CSIC).
 
 My area of expertise is NLP, and my personal favs are post-training, agentic workflows, and evaluation of LLM-powered systems. I also enjoy doing research now and then, especially on explainable AI and computational semantics.
 
