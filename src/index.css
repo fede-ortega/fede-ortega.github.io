@@ -551,6 +551,10 @@ label input {
   padding-top: calc((var(--line-height) / 2) - var(--border-thickness) + 1px);
   padding-bottom: calc((var(--line-height) / 2) - var(--border-thickness));
 }
+/* Firefox applies the `* + *` margin to <br>, which adds an empty line above the contact links. */
+br {
+  margin-top: 0;
+}
 .header .resume-link {
   display: inline-block;
   margin-bottom: calc(var(--line-height) / 4);
