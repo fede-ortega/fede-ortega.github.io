@@ -116,5 +116,39 @@ const debugToggle = document.querySelector(".debug-toggle");
 function onDebugToggle() {
   document.body.classList.toggle("debug", debugToggle.checked);
 }
-debugToggle.addEventListener("change", onDebugToggle);
-onDebugToggle();
+if (debugToggle) {
+  debugToggle.addEventListener("change", onDebugToggle);
+  onDebugToggle();
+}
+
+function applyTheme(theme) {
+  if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+  for (const option of document.querySelectorAll(".theme-option")) {
+    const on = option.dataset.themeOption === theme;
+    option.classList.toggle("active", on);
+    option.setAttribute("aria-pressed", String(on));
+  }
+}
+
+for (const option of document.querySelectorAll(".theme-option")) {
+  option.addEventListener("click", (event) => {
+    const theme = option.dataset.themeOption;
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
+    applyTheme(theme);
+  });
+}
+applyTheme(document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark");
+window.addEventListener("pageshow", (event) => {
+  if (!event.persisted) return;
+  let theme = null;
+  try {
+    theme = localStorage.getItem("theme");
+  } catch (e) {}
+  applyTheme(theme === "light" ? "light" : "dark");
+});
