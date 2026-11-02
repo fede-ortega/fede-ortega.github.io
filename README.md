@@ -1,16 +1,25 @@
-# The Monospace Web
+# fede-ortega.github.io
 
-Monospace fonts are dear to many of us. Some find them more readable, consistent, and beautiful, than their proportional alternatives. Maybe we’re just brainwashed from spending years in terminals? Or are we hopelessly nostalgic? I’m not sure. But I like them, and that’s why I started experimenting with all-monospace Web.
+Personal website of Federico Ortega Riba, served at <https://fede-ortega.github.io/> (English) and <https://fede-ortega.github.io/es/> (Spanish).
 
-https://owickstrom.github.io/the-monospace-web/
+## Editing
 
-## Build
+- English content: `content/index.md`
+- Spanish content: `content/index.es.md`
+- Shared page layout (header, language toggle, meta tags): `content/template.html`
+- Résumé: drop the PDF at `files/Federico_OrtegaRiba_Resume.pdf`
 
+## Building
+
+Requires [Pandoc](https://pandoc.org/).
+
+```sh
+make        # builds index.html and es/index.html
+make serve  # builds and serves at http://127.0.0.1:8000
 ```
-nix develop # or `direnv allow .`
-make
-```
 
-## License
+The generated `index.html` and `es/index.html` are committed, since GitHub Pages serves the repository root as-is.
 
-[MIT](LICENSE.md)
+## Credits
+
+Based on [The Monospace Web](https://github.com/owickstrom/the-monospace-web) by Oskar Wickström (MIT, see `LICENSE.md`). Uses the [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) font, self-hosted under the SIL Open Font License 1.1 (see `fonts/OFL.txt`).
